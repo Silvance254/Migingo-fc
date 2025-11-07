@@ -1,0 +1,864 @@
+/* CSS Variables */
+:root {
+    --primary: #1a3d7c;
+    --secondary: #d4af37;
+    --accent: #c8102e;
+    --light: #f8f9fa;
+    --dark: #212529;
+    --gray: #6c757d;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+h2:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--secondary);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background: var(--secondary);
+    color: var(--dark);
+}
+
+.btn-secondary:hover {
+    background: #b8941f;
+}
+
+/* Header Styles */
+header {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: white;
+}
+
+.logo-text p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--secondary);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--secondary);
+}
+
+nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--secondary);
+    transition: var(--transition);
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+.mobile-menu {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(26, 61, 124, 0.8), rgba(26, 61, 124, 0.9)), url('images/team-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 180px 0 100px;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.hero .motto {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.hero .year {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+}
+
+/* About Section */
+.about {
+    background: white;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Players Section */
+.players {
+    background: #f8f9fa;
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.player-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.player-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.player-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.player-card:hover .player-img img {
+    transform: scale(1.1);
+}
+
+.player-info {
+    padding: 20px;
+}
+
+.player-info h3 {
+    margin-bottom: 5px;
+    color: var(--primary);
+}
+
+.player-info p {
+    margin-bottom: 5px;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Coaches Section */
+.coaches {
+    background: white;
+}
+
+.coach-card {
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.coach-img {
+    width: 200px;
+    overflow: hidden;
+}
+
+.coach-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.coach-info {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Achievements Section */
+.achievements {
+    background: #f8f9fa;
+}
+
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.achievement-card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+}
+
+.achievement-icon {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 15px;
+}
+
+/* News Section */
+.news {
+    background: white;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.news-img {
+    height: 200px;
+    overflow: hidden;
+}
+
+.news-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.news-card:hover .news-img img {
+    transform: scale(1.1);
+}
+
+.news-content {
+    padding: 20px;
+}
+
+.news-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* Comments Section */
+.comments {
+    background: #f8f9fa;
+}
+
+.comment-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.comments-list {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.comment {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.comment-date {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
+
+/* Contact Section */
+.contact {
+    background: white;
+}
+
+.contact-content {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    background: var(--primary);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+/* Footer */
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    flex: 1;
+}
+
+.footer-links {
+    flex: 2;
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-links h3 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #aaa;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.copyright a {
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .about-content, .contact-content {
+        flex-direction: column;
+    }
+    
+    .coach-card {
+        flex-direction: column;
+    }
+    
+    .coach-img {
+        width: 100%;
+        height: 200px;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+    }
+    
+    .footer-links {
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-links > div {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: var(--shadow);
+    }
+    
+    nav ul.show {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 0;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 15px;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-links > div {
+        width: 100%;
+    }
+}
+/* Featured Players Section */
+.view-all-players {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.player-card.featured {
+    position: relative;
+    border: 3px solid var(--secondary);
+}
+
+.player-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    z-index: 2;
+}
+
+/* Players Page Specific Styles */
+.players-hero {
+    background: linear-gradient(rgba(26, 61, 124, 0.8), rgba(26, 61, 124, 0.9)), url('images/team-training.jpg');
+    margin-top: 80px;
+    padding: 120px 0 80px;
+}
+
+.team-leadership {
+    background: white;
+    padding: 80px 0;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.leader-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: var(--transition);
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.leader-card.captain {
+    border: 3px solid var(--secondary);
+}
+
+.leader-card.vice-captain {
+    border: 3px solid var(--primary);
+}
+
+.leader-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--secondary);
+    color: var(--dark);
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    z-index: 2;
+}
+
+.leader-card.vice-captain .leader-badge {
+    background: var(--primary);
+    color: white;
+}
+
+.leader-img {
+    height: 300px;
+    overflow: hidden;
+}
+
+.leader-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.leader-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--primary);
+}
+
+.full-squad {
+    background: #f8f9fa;
+    padding: 80px 0;
+}
+
+.position-filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: white;
+}
+
+.search-box {
+    max-width: 400px;
+    margin: 0 auto 40px;
+}
+
+.load-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.player-stats {
+    background: white;
+    padding: 80px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: var(--primary);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: var(--accent);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Active Navigation Link */
+nav ul li a.active {
+    color: var(--secondary);
+}
+
+nav ul li a.active:after {
+    width: 100%;
+}
+
+/* Responsive Styles for Players Page */
+@media (max-width: 768px) {
+    .leadership-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .position-filters {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
