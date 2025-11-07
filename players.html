@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Migingo FC Players - Meet our talented squad of footballers">
+    <meta name="keywords" content="Migingo FC players, football squad, team roster">
+    <title>Players - Migingo Football Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Migingo FC Logo" class="logo-img">
+                    <div class="logo-text">
+                        <h1>MIGINGO FC</h1>
+                        <p>No Guts, No Glory</p>
+                    </div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="players.html" class="active">Players</a></li>
+                        <li><a href="index.html#coaches">Coaches</a></li>
+                        <li><a href="index.html#achievements">Achievements</a></li>
+                        <li><a href="index.html#news">News</a></li>
+                        <li><a href="index.html#comments">Comments</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                    <div class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Players Hero Section -->
+    <section class="hero players-hero">
+        <div class="container">
+            <h1>OUR PLAYERS</h1>
+            <p>Meet the talented individuals who make Migingo FC great</p>
+        </div>
+    </section>
+
+    <!-- Team Leadership Section -->
+    <section class="team-leadership">
+        <div class="container">
+            <h2>Team Leadership</h2>
+            <div class="leadership-grid">
+                <div class="leader-card captain">
+                    <div class="leader-badge">Captain</div>
+                    <div class="leader-img">
+                        <img src="images/player1.jpg" alt="James Omondi">
+                    </div>
+                    <div class="leader-info">
+                        <h3>James Omondi</h3>
+                        <p><strong>Position:</strong> Striker</p>
+                        <p><strong>Jersey No:</strong> 9</p>
+                        <p><strong>Joined:</strong> 2018</p>
+                        <p><strong>Matches:</strong> 125</p>
+                        <p><strong>Goals:</strong> 68</p>
+                    </div>
+                </div>
+
+                <div class="leader-card vice-captain">
+                    <div class="leader-badge">Vice Captain</div>
+                    <div class="leader-img">
+                        <img src="images/player2.jpg" alt="David Kipchoge">
+                    </div>
+                    <div class="leader-info">
+                        <h3>David Kipchoge</h3>
+                        <p><strong>Position:</strong> Midfielder</p>
+                        <p><strong>Jersey No:</strong> 8</p>
+                        <p><strong>Joined:</strong> 2016</p>
+                        <p><strong>Matches:</strong> 142</p>
+                        <p><strong>Goals:</strong> 24</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Squad Section -->
+    <section class="full-squad">
+        <div class="container">
+            <h2>Full Squad</h2>
+            
+            <!-- Position Filters -->
+            <div class="position-filters">
+                <button class="filter-btn active" data-filter="all">All Players</button>
+                <button class="filter-btn" data-filter="goalkeeper">Goalkeepers</button>
+                <button class="filter-btn" data-filter="defender">Defenders</button>
+                <button class="filter-btn" data-filter="midfielder">Midfielders</button>
+                <button class="filter-btn" data-filter="striker">Strikers</button>
+            </div>
+
+            <!-- Search Box -->
+            <div class="search-box">
+                <input type="text" id="playerSearch" placeholder="Search players by name..." class="form-control">
+            </div>
+
+            <!-- Players Grid -->
+            <div class="players-grid" id="playersContainer">
+                <!-- Goalkeepers -->
+                <div class="player-card" data-position="goalkeeper">
+                    <div class="player-img">
+                        <img src="images/player4.jpg" alt="Brian Musyoka">
+                    </div>
+                    <div class="player-info">
+                        <h3>Brian Musyoka</h3>
+                        <p><strong>Position:</strong> Goalkeeper</p>
+                        <p><strong>Jersey No:</strong> 1</p>
+                        <p><strong>Age:</strong> 24</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="goalkeeper">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Samuel Kariuki">
+                    </div>
+                    <div class="player-info">
+                        <h3>Samuel Kariuki</h3>
+                        <p><strong>Position:</strong> Goalkeeper</p>
+                        <p><strong>Jersey No:</strong> 22</p>
+                        <p><strong>Age:</strong> 21</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <!-- Defenders -->
+                <div class="player-card" data-position="defender">
+                    <div class="player-img">
+                        <img src="images/player3.jpg" alt="Samuel Otieno">
+                    </div>
+                    <div class="player-info">
+                        <h3>Samuel Otieno</h3>
+                        <p><strong>Position:</strong> Defender</p>
+                        <p><strong>Jersey No:</strong> 4</p>
+                        <p><strong>Age:</strong> 26</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="defender">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Michael Kamau">
+                    </div>
+                    <div class="player-info">
+                        <h3>Michael Kamau</h3>
+                        <p><strong>Position:</strong> Defender</p>
+                        <p><strong>Jersey No:</strong> 2</p>
+                        <p><strong>Age:</strong> 27</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="defender">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Joseph Mwangi">
+                    </div>
+                    <div class="player-info">
+                        <h3>Joseph Mwangi</h3>
+                        <p><strong>Position:</strong> Defender</p>
+                        <p><strong>Jersey No:</strong> 3</p>
+                        <p><strong>Age:</strong> 25</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="defender">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Peter Ochieng">
+                    </div>
+                    <div class="player-info">
+                        <h3>Peter Ochieng</h3>
+                        <p><strong>Position:</strong> Defender</p>
+                        <p><strong>Jersey No:</strong> 5</p>
+                        <p><strong>Age:</strong> 23</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <!-- Midfielders -->
+                <div class="player-card" data-position="midfielder">
+                    <div class="player-img">
+                        <img src="images/player2.jpg" alt="David Kipchoge">
+                    </div>
+                    <div class="player-info">
+                        <h3>David Kipchoge</h3>
+                        <p><strong>Position:</strong> Midfielder</p>
+                        <p><strong>Jersey No:</strong> 8</p>
+                        <p><strong>Age:</strong> 28</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="midfielder">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Kevin Maina">
+                    </div>
+                    <div class="player-info">
+                        <h3>Kevin Maina</h3>
+                        <p><strong>Position:</strong> Midfielder</p>
+                        <p><strong>Jersey No:</strong> 6</p>
+                        <p><strong>Age:</strong> 22</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="midfielder">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Eric Njoroge">
+                    </div>
+                    <div class="player-info">
+                        <h3>Eric Njoroge</h3>
+                        <p><strong>Position:</strong> Midfielder</p>
+                        <p><strong>Jersey No:</strong> 14</p>
+                        <p><strong>Age:</strong> 24</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <!-- Strikers -->
+                <div class="player-card" data-position="striker">
+                    <div class="player-img">
+                        <img src="images/player1.jpg" alt="James Omondi">
+                    </div>
+                    <div class="player-info">
+                        <h3>James Omondi</h3>
+                        <p><strong>Position:</strong> Striker</p>
+                        <p><strong>Jersey No:</strong> 9</p>
+                        <p><strong>Age:</strong> 25</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <div class="player-card" data-position="striker">
+                    <div class="player-img">
+                        <img src="images/player-placeholder.jpg" alt="Victor Odhiambo">
+                    </div>
+                    <div class="player-info">
+                        <h3>Victor Odhiambo</h3>
+                        <p><strong>Position:</strong> Striker</p>
+                        <p><strong>Jersey No:</strong> 11</p>
+                        <p><strong>Age:</strong> 23</p>
+                        <p><strong>Nationality:</strong> Kenyan</p>
+                    </div>
+                </div>
+
+                <!-- Add more players as needed -->
+            </div>
+
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button id="loadMore" class="btn btn-secondary">Load More Players</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="player-stats">
+        <div class="container">
+            <h2>Team Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">35</div>
+                    <div class="stat-label">Total Players</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">25.4</div>
+                    <div class="stat-label">Average Age</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">156</div>
+                    <div class="stat-label">Total Goals</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Youth Players</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="Migingo FC Logo" class="logo-img">
+                        <div class="logo-text">
+                            <h1>MIGINGO FC</h1>
+                            <p>No Guts, No Glory</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 20px; color: #aaa;">Founded in 1975, Migingo Football Club continues to be a symbol of excellence and community spirit.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div>
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html#about">About</a></li>
+                            <li><a href="players.html">Players</a></li>
+                            <li><a href="index.html#coaches">Coaches</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Club</h3>
+                        <ul>
+                            <li><a href="index.html#achievements">Achievements</a></li>
+                            <li><a href="index.html#news">News</a></li>
+                            <li><a href="index.html#contact">Contact</a></li>
+                            <li><a href="#">Shop</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3>Follow Us</h3>
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 Migingo Football Club. All Rights Reserved. | Designed by <a href="#">Silvance</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="players-script.js"></script>
+</body>
+  </html>
